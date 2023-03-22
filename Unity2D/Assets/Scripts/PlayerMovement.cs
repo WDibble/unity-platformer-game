@@ -61,12 +61,12 @@ public class PlayerMovement : MonoBehaviour
         if (dirX > 0f)
         {
             state = AnimationState.running;
-            sprite.flipX = false;
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else if (dirX < 0f)
         {
             state = AnimationState.running;
-            sprite.flipX = true;
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
         else
         {

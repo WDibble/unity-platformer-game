@@ -9,6 +9,10 @@ TagManager:
   - BackgroundTrigger
   - CaveCamTrigger1
   - CaveCamTrigger2
+  - CameraConfiner
+  - Bullet2Collect
+  - Bullet3Collect
+  - Bullet1Collect
   layers:
   - Default
   - TransparentFX

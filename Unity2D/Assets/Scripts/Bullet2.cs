@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Bullet2 : MonoBehaviour
+{
+
+    [SerializeField] private float bulletSpeed = 20f;
+    [SerializeField] private int damage = 25;
+    private Rigidbody2D rb;
+    [SerializeField] private GameObject bullet2Impact;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * bulletSpeed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("CameraConfiner"))
+        {
+            JumpingEnemyAI JumpingEnemy = collision.GetComponent<JumpingEnemyAI>();
+            RollingEnemyAI RollingEnemy = collision.GetComponent<RollingEnemyAI>();
+
+            if (JumpingEnemy != null)
+            {
+                JumpingEnemy.TakeDamage(damage);
+            }
+            else if (RollingEnemy != null)
+            {
+                RollingEnemy.TakeDamage(damage);
+            }
+            Instantiate(bullet2Impact, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
+}

@@ -816,7 +816,10 @@ namespace Pathfinding {
 		protected abstract void CalculateStep(long targetTick);
 
 		PathHandler IPathInternals.PathHandler { get { return pathHandler; } }
-		void IPathInternals.OnEnterPool () { OnEnterPool(); }
+
+        public Vector3 EndPoint { get; set; }
+
+        void IPathInternals.OnEnterPool () { OnEnterPool(); }
 		void IPathInternals.Reset () { Reset(); }
 		void IPathInternals.ReturnPath () { ReturnPath(); }
 		void IPathInternals.PrepareBase (PathHandler handler) { PrepareBase(handler); }
