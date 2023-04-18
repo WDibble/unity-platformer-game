@@ -20,15 +20,17 @@ public class Dissolve : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            PlayerVisibility.SetInvisible(true);
-            isDissolving = true;
-        }
-
-        else if (Input.GetKeyDown(KeyCode.G))
-        {
-            PlayerVisibility.SetInvisible(false);
-            isDissolving = false;
-        }
+            if (!PlayerVisibility.IsInvisible)
+            {
+                PlayerVisibility.SetInvisible(true); 
+                isDissolving = true;
+            }
+            else
+            {
+                PlayerVisibility.SetInvisible(false);
+                isDissolving = false;
+            }          
+        }     
 
         if (isDissolving)
         {

@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CinemachineController : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class CinemachineController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Level 3")
+        {
+            return;
+        }
+
         bool isInvisible = PlayerVisibility.IsInvisible;
 
         if (isInvisible && vcam.m_Lens.OrthographicSize != invisibleOrthoSize)

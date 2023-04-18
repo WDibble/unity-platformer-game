@@ -5,7 +5,6 @@ using Pathfinding;
 
 public class RollingEnemyAI : MonoBehaviour
 {
-
     public Transform target;
 
     public float speed = 200f;
@@ -28,15 +27,24 @@ public class RollingEnemyAI : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         collision = GetComponent<BoxCollider2D>();
 
-        InvokeRepeating("UpdatePath", 0f, .5f);       
+        InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
     void UpdatePath()
     {
+        float distanceToTarget = Vector2.Distance(transform.position, target.position);
+        float maxDistance = PlayerVisibility.GetInvisible() ? 8f : 13f;
+
+        if (distanceToTarget > maxDistance)
+        {
+            // Player is too far away, don't update the path
+            return;
+        }
+
         if (seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
-        }       
+        }
     }
 
     void OnPathComplete(Path p)
@@ -81,7 +89,7 @@ public class RollingEnemyAI : MonoBehaviour
 
         if (PlayerVisibility.GetInvisible())
         {
-            force = (speed/2) * Time.deltaTime * direction;
+            force = (speed / 2) * Time.deltaTime * direction;
         }
 
         rb.AddForce(force);

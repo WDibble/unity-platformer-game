@@ -103,6 +103,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 2
+  player: {fileID: 0}
+  maxDistance: 20
 --- !u!114 &4900513194781011576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+  player: {fileID: 0}
+  maxDistance: 20
 --- !u!61 &4900513194781011583
 BoxCollider2D:
   m_ObjectHideFlags: 0

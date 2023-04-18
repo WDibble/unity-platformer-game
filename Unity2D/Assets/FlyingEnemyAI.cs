@@ -5,7 +5,6 @@ using Pathfinding;
 
 public class FlyingEnemyAI : MonoBehaviour
 {
-
     public Transform target;
 
     public float speed = 200f;
@@ -27,7 +26,6 @@ public class FlyingEnemyAI : MonoBehaviour
     [SerializeField] private Transform dropPoint;
     [SerializeField] private GameObject TNTPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -35,8 +33,7 @@ public class FlyingEnemyAI : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         collision = GetComponent<BoxCollider2D>();
 
-
-        InvokeRepeating("UpdatePath", 0f, .5f);        
+        InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
     void DropTNT()
@@ -53,6 +50,15 @@ public class FlyingEnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
+        float distanceToTarget = Vector2.Distance(transform.position, target.position);
+        float maxDistance = PlayerVisibility.GetInvisible() ? 8f : 13f;
+
+        if (distanceToTarget > maxDistance)
+        {
+            // Player is too far away, don't update the path
+            return;
+        }
+
         if (seeker.IsDone())
         {
             // Calculate the modified target position
@@ -72,7 +78,6 @@ public class FlyingEnemyAI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (path == null)

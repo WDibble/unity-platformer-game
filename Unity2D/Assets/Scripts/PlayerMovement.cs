@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    private bool canDoubleJump = false;
+    private bool hasDoubleJumped = false;
+
     [SerializeField] private LayerMask onGroundMask;
+    [SerializeField] private GameObject teleportPoint;
 
     private float dirX = 0f;
     [SerializeField] private float moveVelocity = 7f;
@@ -26,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         collision = GetComponent<BoxCollider2D>();
+
+        if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            canDoubleJump = true;
+        }
     }
 
     // Update is called once per frame
@@ -34,15 +44,25 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveVelocity, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && onGround())
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
-            jumpSound.Play();
+            if (onGround())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+                jumpSound.Play();
+                hasDoubleJumped = false;
+            }
+            else if (canDoubleJump && !hasDoubleJumped)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+                jumpSound.Play();
+                hasDoubleJumped = true;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            transform.position = new Vector2(150.54f, -23.94f);
+            transform.position = teleportPoint.transform.position;
         }
 
         if (Input.GetKeyDown(KeyCode.T))

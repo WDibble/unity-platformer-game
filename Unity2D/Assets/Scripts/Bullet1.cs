@@ -21,6 +21,8 @@ public class Bullet1 : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("CameraConfiner"))
         {
+            Debug.Log("Bullet collided with: " + collision.gameObject.name); // Add this line
+
             JumpingEnemyAI JumpingEnemy = collision.GetComponent<JumpingEnemyAI>();
             RollingEnemyAI RollingEnemy = collision.GetComponent<RollingEnemyAI>();
 
@@ -30,6 +32,7 @@ public class Bullet1 : MonoBehaviour
             }
             else if (RollingEnemy != null)
             {
+                Debug.Log("Bullet collided with rolling enemy"); // Add this line
                 RollingEnemy.TakeDamage(damage);
             }
             Instantiate(bullet1Impact, transform.position, transform.rotation);

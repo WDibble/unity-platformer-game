@@ -9,16 +9,42 @@ public class PointFollower : MonoBehaviour
 
     [SerializeField] private float speed = 2f;
 
+    [SerializeField] private bool alwaysOn = false;
+
+    // Reference to the player's transform
+    [SerializeField] private Transform player;
+
+    // Distance threshold
+    [SerializeField] private float maxDistance = 15f;
+
     private void Update()
     {
-        if (Vector2.Distance(points[currentPointIndex].transform.position, transform.position) < .1f)
+        bool shouldMove = false;
+
+        if (gameObject.CompareTag("Platform"))
         {
-            currentPointIndex++;
-            if (currentPointIndex >= points.Length)
-            {
-                currentPointIndex = 0;
-            }
+            shouldMove = true;
         }
-        transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].transform.position, Time.deltaTime * speed);
+        else if (alwaysOn)
+        {
+            shouldMove = true;
+        }
+        else if (Vector2.Distance(player.position, transform.position) <= maxDistance)
+        {
+            shouldMove = true;
+        }
+
+        if (shouldMove)
+        {
+            if (Vector2.Distance(points[currentPointIndex].transform.position, transform.position) < .1f)
+            {
+                currentPointIndex++;
+                if (currentPointIndex >= points.Length)
+                {
+                    currentPointIndex = 0;
+                }
+            }
+            transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].transform.position, Time.deltaTime * speed);
+        }
     }
 }

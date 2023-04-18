@@ -13,6 +13,8 @@ TagManager:
   - Bullet2Collect
   - Bullet3Collect
   - Bullet1Collect
+  - Platform
+  - Boss1Trigger
   layers:
   - Default
   - TransparentFX
