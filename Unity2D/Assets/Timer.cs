@@ -12,8 +12,9 @@ public class Timer : MonoBehaviour
     private int bullet3Count = 0;
 
     private int[] bulletLevel1 = { 0, 0, 0 };
-    private int[] bulletLevel2 = { 1, 1, 1 };
-    private int[] bulletLevel3 = { 2, 2, 2 };
+    private int[] bulletLevel2 = { 0, 0, 0 };
+    private int[] bulletLevel3 = { 0, 0, 0 };
+    private int[] bulletLevel4 = { 0, 0, 0 };
 
 
     private void Awake()
@@ -32,6 +33,11 @@ public class Timer : MonoBehaviour
         if (scene.name == "Level 1")
         {
             StartTimer();
+        }
+
+        else if (scene.name == "Final Score Screen")
+        {
+            StopTimer();
         }
     }
 
@@ -117,5 +123,15 @@ public class Timer : MonoBehaviour
     public void SetBulletLevel3Count(int[] count)
     {
         bulletLevel3 = count;
+    }
+
+    public int[] GetBulletLevel4Count()
+    {
+        return bulletLevel4;
+    }
+
+    public void SetBulletLevel4Count(int[] count)
+    {
+        bulletLevel4 = count;
     }
 }

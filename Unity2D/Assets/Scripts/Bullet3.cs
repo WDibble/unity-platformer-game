@@ -23,6 +23,7 @@ public class Bullet3 : MonoBehaviour
         {
             JumpingEnemyAI JumpingEnemy = collision.GetComponent<JumpingEnemyAI>();
             RollingEnemyAI RollingEnemy = collision.GetComponent<RollingEnemyAI>();
+            BatEnemyAI BatBossEnemy = collision.GetComponent<BatEnemyAI>();
 
             if (JumpingEnemy != null)
             {
@@ -31,6 +32,10 @@ public class Bullet3 : MonoBehaviour
             else if (RollingEnemy != null)
             {
                 RollingEnemy.TakeDamage(damage);
+            }
+            else if (BatBossEnemy != null)
+            {
+                BatBossEnemy.TakeDamage(damage);
             }
             Instantiate(bullet3Impact, transform.position, transform.rotation);
             Destroy(gameObject);

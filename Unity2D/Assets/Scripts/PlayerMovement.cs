@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    // Reference to the Timer script
+    private Timer timer;
+
+    private LevelManager levelManager;
+
     private bool canDoubleJump = false;
     private bool hasDoubleJumped = false;
 
@@ -32,7 +37,17 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         collision = GetComponent<BoxCollider2D>();
 
+        // Find the Timer object and get its Timer script component
+        timer = FindObjectOfType<Timer>();
+
+        levelManager = FindObjectOfType<LevelManager>();
+
         if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            canDoubleJump = true;
+        }
+
+        else if (SceneManager.GetActiveScene().name == "Level 4")
         {
             canDoubleJump = true;
         }
@@ -68,6 +83,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             transform.position = new Vector2(120.5f, 0.7f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {           
+            int[] bulletCounts = { 8, 8, 8 };
+            timer.SetBulletLevel4Count(bulletCounts);            
+            levelManager.LoadLevel("Level 4");
         }
 
         UpdateAnimations();

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4900513194781011578}
   - component: {fileID: 4900513194781011579}
-  - component: {fileID: 6361252712283429523}
+  - component: {fileID: 1135095704956420658}
   - component: {fileID: 4900513194781011583}
   - component: {fileID: -299815234472030281}
-  - component: {fileID: 2709253138642076626}
+  - component: {fileID: 2480756803948538830}
   m_Layer: 0
   m_Name: Invisible Bat
   m_TagString: Trap
@@ -77,18 +77,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 440700795, guid: 4142888aec9cf5d41b066d843dcf5623, type: 3}
+  m_Sprite: {fileID: 1580508237, guid: b1df51a0ecc5c9240ab0e21a066a429f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6361252712283429523
+--- !u!114 &1135095704956420658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +120,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 3, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27789a90ede9b43b2ef601286819a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alreadyInvisible: 0
---- !u!95 &2709253138642076626
+  alreadyInvisible: 1
+--- !u!95 &2480756803948538830
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ Animator:
   m_GameObject: {fileID: 4900513194781011572}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d4bb64d474915142a76b6d04a0cb179, type: 2}
+  m_Controller: {fileID: 9100000, guid: 68bc34c36d39f4e4b9e25f752caf40f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

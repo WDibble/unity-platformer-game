@@ -27,6 +27,11 @@ public class CinemachineController : MonoBehaviour
             return;
         }
 
+        else if (currentSceneName == "Level 4")
+        {
+            return;
+        }
+
         bool isInvisible = PlayerVisibility.IsInvisible;
 
         if (isInvisible && vcam.m_Lens.OrthographicSize != invisibleOrthoSize)

@@ -21,13 +21,14 @@ public class LevelManager : MonoBehaviour
         {
             timer.StartTimer();
         }
-        else if (scene.name == "Level 3")
-        {
-            timer.StopTimer();
-        }
     }
     public void LoadLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
+    }
+
+    public void StopTimer()
+    {
+        timer.StopTimer();
     }
 }

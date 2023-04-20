@@ -5709,6 +5709,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 4900513194781011576, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
     - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
       propertyPath: points.Array.data[0]
       value: 
@@ -11482,6 +11490,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 4900513194781011576, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
     - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
       propertyPath: points.Array.data[0]
       value: 
@@ -12545,6 +12561,7 @@ MonoBehaviour:
   onGroundMask:
     serializedVersion: 2
     m_Bits: 64
+  teleportPoint: {fileID: 0}
   moveVelocity: 7
   jumpVelocity: 14
   jumpSound: {fileID: 1000960342}
@@ -12593,6 +12610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 1000960344}
+  invincible: 0
 --- !u!82 &1000960342
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12928,9 +12946,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1db5714c6cb024e4b8186a5ef93abcce, type: 3}
   bulletBoxObject: {fileID: 103602207}
   currentWeaponIndex: 0
-  bullet1Count: 0
-  bullet2Count: 0
-  bullet3Count: 0
   bullet1CountText: {fileID: 359835496}
   bullet2CountText: {fileID: 347684711}
   bullet3CountText: {fileID: 1847440612}
@@ -14870,6 +14885,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 4900513194781011576, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
     - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
       propertyPath: points.Array.data[0]
       value: 
@@ -18069,6 +18092,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 4900513194781011576, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
     - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
       propertyPath: points.Array.data[0]
       value: 
@@ -21170,6 +21201,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blade
       objectReference: {fileID: 0}
+    - target: {fileID: 4900513194781011576, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
     - target: {fileID: 4900513194781011577, guid: f5e269dc67f751d4e8a24a8a874f73dc, type: 3}
       propertyPath: points.Array.data[0]
       value: 
@@ -21296,6 +21335,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 872273161}
     m_Modifications:
+    - target: {fileID: 6421484229538458753, guid: 955da1c158f9e0d4cbb8f28a428f7c95, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000960335}
+    - target: {fileID: 6421484229538458753, guid: 955da1c158f9e0d4cbb8f28a428f7c95, type: 3}
+      propertyPath: alwaysOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6421484229538458753, guid: 955da1c158f9e0d4cbb8f28a428f7c95, type: 3}
       propertyPath: points.Array.data[0]
       value: 

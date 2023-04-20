@@ -177,6 +177,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 2
+  alwaysOn: 1
+  player: {fileID: 0}
+  maxDistance: 15
 --- !u!114 &6421484229538458783
 MonoBehaviour:
   m_ObjectHideFlags: 0

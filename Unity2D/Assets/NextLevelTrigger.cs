@@ -33,6 +33,12 @@ public class NextLevelTrigger : MonoBehaviour
                 timer.SetBulletLevel3Count(bulletCounts);
             }
 
+            else if (SceneManager.GetActiveScene().name == "Level 3")
+            {
+                int[] bulletCounts = { timer.GetBullet1Count(), timer.GetBullet2Count(), timer.GetBullet3Count() };
+                timer.SetBulletLevel4Count(bulletCounts);
+            }
+
             levelManager.LoadLevel(nextLevelName);
         }
     }

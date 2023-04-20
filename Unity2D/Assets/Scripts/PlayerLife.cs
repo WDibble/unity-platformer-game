@@ -49,6 +49,12 @@ public class PlayerLife : MonoBehaviour
             timer.SetBullet2Count(timer.GetBulletLevel3Count()[1]);
             timer.SetBullet3Count(timer.GetBulletLevel3Count()[2]);
         }
+        else if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            timer.SetBullet1Count(timer.GetBulletLevel4Count()[0]);
+            timer.SetBullet2Count(timer.GetBulletLevel4Count()[1]);
+            timer.SetBullet3Count(timer.GetBulletLevel4Count()[2]);
+        }
     }
 
     // Detect collision with traps
