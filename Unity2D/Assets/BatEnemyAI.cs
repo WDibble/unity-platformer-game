@@ -50,7 +50,7 @@ public class BatEnemyAI : MonoBehaviour
     // Update the path to the target
     void UpdatePath()
     {
-        float distanceToTarget = Vector2.Distance(transform.position, target.position);   
+        float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
         if (seeker.IsDone())
         {
@@ -120,7 +120,7 @@ public class BatEnemyAI : MonoBehaviour
         if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
-        }      
+        }
 
         // Handle invisibility
         HandleInvisibility();

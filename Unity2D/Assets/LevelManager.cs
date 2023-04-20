@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public Timer timer;
+    public TransitionImageController transitionImageController;
 
     private void Start()
     {
@@ -21,9 +23,21 @@ public class LevelManager : MonoBehaviour
         {
             timer.StartTimer();
         }
+
+        // Trigger the fade out when the scene loads
+        transitionImageController.FadeOut();
     }
+
     public void LoadLevel(string levelName)
     {
+        // Trigger the fade in and wait for it to complete before loading a new scene
+        StartCoroutine(LoadLevelWithTransition(levelName));
+    }
+
+    private IEnumerator LoadLevelWithTransition(string levelName)
+    {
+        transitionImageController.FadeIn();
+        yield return new WaitForSeconds(transitionImageController.transitionTime);
         SceneManager.LoadScene(levelName);
     }
 

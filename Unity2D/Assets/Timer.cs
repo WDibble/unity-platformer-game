@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
 
         else if (scene.name == "Final Score Screen")
         {
-            StopTimer();
+            //StopTimer();
         }
     }
 

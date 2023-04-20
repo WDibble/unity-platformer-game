@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class CreditsMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
+    public GameObject creditsMenuUI;
 
     private bool isPaused = false;
 
@@ -20,12 +20,22 @@ public class PauseMenu : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
     }
 
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
     {
-        // Check if the Escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        
+    }
+
+    // Resume the game and deactivate the pause menu
+    public void Resume()
+    {
+        creditsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void Credits()
+    {
             // Toggle the pause menu based on the current state
             if (isPaused)
             {
@@ -35,21 +45,12 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
-        }
-    }
-
-    // Resume the game and deactivate the pause menu
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
     }
 
     // Pause the game and activate the pause menu
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        creditsMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
     }
