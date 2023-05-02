@@ -1,3 +1,12 @@
+/*
+ * Weapon.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script handles weapon firing logic and bullet counts for the player character.
+ * 
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +33,7 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             // Check which weapon is currently selected
             switch (weaponSelection.currentWeaponIndex)

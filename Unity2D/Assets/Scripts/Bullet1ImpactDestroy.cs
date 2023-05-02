@@ -1,3 +1,11 @@
+/*
+ * Bullet1ImpactDestroy.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script is used to destroy the bullet impact prefab effect with a delay after it is instantiated.
+ * 
+ */
 using UnityEngine;
 
 public class Bullet1ImpactDestroy : MonoBehaviour

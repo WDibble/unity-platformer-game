@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 98101907796311195}
   - component: {fileID: 98101907796311194}
   - component: {fileID: 7115291361460209671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invisible Spikes
   m_TagString: Trap
   m_Icon: {fileID: 0}

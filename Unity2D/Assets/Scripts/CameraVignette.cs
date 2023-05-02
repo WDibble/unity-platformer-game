@@ -1,3 +1,13 @@
+/*
+ * CameraVignette.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * WIP - UNUSED
+ * This script is used to control the intensity of the vignette effect on the camera based on whether the player is dissolving (becoming invisible) or not. 
+ * 
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -6068,7 +6068,7 @@ Transform:
   m_Children:
   - {fileID: 1846638630}
   m_Father: {fileID: 970466379}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &137896173
 MonoBehaviour:
@@ -9593,7 +9593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324574964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 335.2, y: -11.76, z: -1.5226068}
+  m_LocalPosition: {x: 121.5, y: -11.76, z: -1.5226068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10764,7 +10764,7 @@ Transform:
   m_Children:
   - {fileID: 622371628}
   m_Father: {fileID: 970466379}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &402386600
 MonoBehaviour:
@@ -26337,7 +26337,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 970466379}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &539687888
 MonoBehaviour:
@@ -28092,64 +28092,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f1f93d681aa9c4db7ed63d0f7c9b9f, type: 3}
---- !u!1 &659819671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 659819672}
-  - component: {fileID: 659819673}
-  m_Layer: 0
-  m_Name: Cave Camera Trigger 1
-  m_TagString: CaveCamTrigger1
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &659819672
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659819671}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -8.36, y: -5.24, z: -0.0008373996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 970466379}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!61 &659819673
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659819671}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.5156212, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 13.512264, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &661893278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31951,6 +31893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RollingEnemyAI
       objectReference: {fileID: 0}
+    - target: {fileID: 8483753809508360586, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
 --- !u!1001 &891596199
@@ -33577,8 +33523,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1933244191}
-  - {fileID: 659819672}
-  - {fileID: 2100121537}
   - {fileID: 402386599}
   - {fileID: 137896172}
   - {fileID: 539687887}
@@ -33863,7 +33807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992821509}
   - component: {fileID: 992821510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Confiner
   m_TagString: CameraConfiner
   m_Icon: {fileID: 0}
@@ -34210,7 +34154,6 @@ MonoBehaviour:
   teleportPoint: {fileID: 324574964}
   moveVelocity: 7
   jumpVelocity: 14
-  jumpSound: {fileID: 1000960342}
 --- !u!95 &1000960338
 Animator:
   serializedVersion: 5
@@ -34255,8 +34198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f84607add7b5d9499c1cf0268dc489b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSound: {fileID: 1000960344}
-  invincible: 0
+  invincible: 1
 --- !u!82 &1000960342
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34599,7 +34541,6 @@ MonoBehaviour:
   bullet1Prefab: {fileID: 3453762755922855194, guid: ff35a1511326fdf4bad53ac2c5a0c999, type: 3}
   bullet2Prefab: {fileID: 3453762755922855194, guid: 700bb5816bf93d24fa5320d90657f660, type: 3}
   bullet3Prefab: {fileID: 3453762755922855194, guid: 20c0c42d8e290e74ebd251561d110f37, type: 3}
-  collectSound: {fileID: 1000960343}
 --- !u!4 &1005266080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 98101907796311196, guid: 68f1f93d681aa9c4db7ed63d0f7c9b9f, type: 3}
@@ -35187,7 +35128,7 @@ GameObject:
   - component: {fileID: 1037951292}
   - component: {fileID: 1037951291}
   m_Layer: 0
-  m_Name: Layer-1
+  m_Name: Layer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38714,7 +38655,7 @@ GameObject:
   - component: {fileID: 1210966067}
   - component: {fileID: 1210966066}
   m_Layer: 0
-  m_Name: Layer-0
+  m_Name: Layer_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39060,7 +39001,7 @@ GameObject:
   - component: {fileID: 1230425709}
   - component: {fileID: 1230425708}
   m_Layer: 0
-  m_Name: Layer-2
+  m_Name: Layer_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44544,7 +44485,7 @@ GameObject:
   - component: {fileID: 1524615385}
   - component: {fileID: 1524615384}
   m_Layer: 0
-  m_Name: Layer-3
+  m_Name: Layer_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47907,7 +47848,7 @@ GameObject:
   - component: {fileID: 1721634631}
   - component: {fileID: 1721634630}
   m_Layer: 0
-  m_Name: Layer-4
+  m_Name: Layer_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48997,7 +48938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483753809508360579, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101.2616
+      value: 97.25
       objectReference: {fileID: 0}
     - target: {fileID: 8483753809508360579, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49034,6 +48975,10 @@ PrefabInstance:
     - target: {fileID: 8483753809508360579, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483753809508360585, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
+      propertyPath: speed
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 8483753809508360585, guid: 739f9914654b0a14e8d830e62041ebdd, type: 3}
       propertyPath: target
@@ -54023,64 +53968,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 98101907796311196, guid: 68f1f93d681aa9c4db7ed63d0f7c9b9f, type: 3}
   m_PrefabInstance: {fileID: 2095960084}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2100121536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2100121537}
-  - component: {fileID: 2100121538}
-  m_Layer: 0
-  m_Name: Cave Camera Trigger 2
-  m_TagString: CaveCamTrigger2
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2100121537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100121536}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 8.51, y: -19.83, z: -0.0008373996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 970466379}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!61 &2100121538
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100121536}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.2152543, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.317886, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2102566481
 GameObject:
   m_ObjectHideFlags: 0
@@ -62610,6 +62497,10 @@ PrefabInstance:
     - target: {fileID: 6405412918118105938, guid: 2059a67fcf46ada49b90fec7b8932b4c, type: 3}
       propertyPath: m_Name
       value: JumpingEnemyAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405412918118105938, guid: 2059a67fcf46ada49b90fec7b8932b4c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6405412918118105938, guid: 2059a67fcf46ada49b90fec7b8932b4c, type: 3}
       propertyPath: m_IsActive

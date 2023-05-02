@@ -1,3 +1,14 @@
+/*
+ * JumpingEnemyAI.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script is for controlling the behavior of a jumping enemy in the game.
+ * The enemy is designed to jump towards a target and damage the player on contact. 
+ * The script uses pathfinding to calculate and update the enemy's path towards the target,
+ * but also uses a jump trajectory instead of a path if the enemy is on the ground and within a certain distance from the target. 
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,47 +18,36 @@ using Pathfinding;
 public class JumpingEnemyAI : MonoBehaviour
 {
     // Declare public variables
-    public Transform target;
-    public Transform enemyGraphics;
-    public float jumpDelay = 2f;
-    public float jumpPower;
-    public int health = 100;
-    // Declare private variables
-    private float jumpForce;
-    private bool isGrounded;
-    private bool isJumping = false;
-    private float jumpTimer = 0f;
-    private Vector2 jumpStartPosition;
-    private Vector2 jumpTargetPosition;
-    private Vector2 facingDirection = Vector2.right;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private Seeker seeker;
-    private Path path;
-    private BoxCollider2D collision;
-    private SpriteRenderer sprite;
-    private float distance;
+    public Transform target; // Target for the enemy to follow
+    public Transform enemyGraphics; // Transform for the enemy's sprite
+    public float jumpDelay = 2f; // Time delay between jumps
+    public float jumpPower; // Jump power for the enemy
+    public int health = 100; // Health value of the enemy
+    
+    // Declare private variables   
+    private Vector2 jumpStartPosition; // Starting position of the jump
+    private Vector2 jumpTargetPosition; // Target position of the jump
+    private Rigidbody2D rb; // Rigidbody2D component of the enemy
+    private Seeker seeker; // Seeker component for pathfinding
+    private BoxCollider2D collision; // BoxCollider2D component of the enemy
+    private SpriteRenderer sprite; // SpriteRenderer component of the enemy
+    private float distance; // Distance between the enemy and the target
+    private AudioManager audioManager; // AudioManager component for playing sounds
 
-    [SerializeField] private LayerMask onGroundMask;
-
-    // Declare integer variables
-    private int currentWaypoint = 0;
-
-    // Declare boolean variables
-    private bool reachedEndOfPath = false;
+    [SerializeField] private LayerMask onGroundMask; // LayerMask to check if the enemy is grounded
 
     // Declare public float variable
-    public float nextWaypointDistance = 3f;
+    public float nextWaypointDistance = 3f; // Distance to the next waypoint
 
     // Start is called before the first frame update
     void Start()
     {
         // Assign component values
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         seeker = GetComponent<Seeker>();
         collision = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         // Repeatedly call UpdatePath function
         InvokeRepeating("UpdatePath", 0f, 0.5f);
@@ -81,9 +81,10 @@ public class JumpingEnemyAI : MonoBehaviour
                 {
                     velocity.x = -19f;
                 }
-                rb.velocity = velocity;                
+                rb.velocity = velocity;
+                audioManager.PlayBigJumpSound();
             }
-            else  // Handle invalid timeToReachTarget
+            else // Handle invalid timeToReachTarget
             {
                 Debug.LogWarning("Invalid timeToReachTarget: " + timeToReachTarget);
             }
@@ -111,9 +112,11 @@ public class JumpingEnemyAI : MonoBehaviour
         return Physics2D.BoxCast(collision.bounds.center, collision.bounds.size, 0f, Vector2.down, .1f, onGroundMask);
     }
 
-    public void TakeDamage (int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
+
+        audioManager.PlayHit2Sound();
 
         if (health <= 0)
         {
@@ -123,6 +126,7 @@ public class JumpingEnemyAI : MonoBehaviour
 
     void Die()
     {
+        audioManager.PlayHit1Sound();
         Destroy(gameObject);
     }
 

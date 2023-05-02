@@ -1,3 +1,12 @@
+/*
+ * BackgroundChange.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script is attached to an object in the game and changes the background when the player enters a specific trigger area.
+ * 
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,11 +28,6 @@ public class BackgroundChange : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BackgroundTrigger"))
         {
-            //background1_1.SetActive(false);
-            //background1_2.SetActive(false);
-            //background1_3.SetActive(false);
-            //background1_4.SetActive(false);
-            
             if (!background2_1.activeInHierarchy)
             {
                 background2_1.SetActive(true);

@@ -23,11 +23,11 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - Traps
+  - Pickups
+  - Bullets
+  - Confiner
   - 
   - 
   - 

@@ -22162,7 +22162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992821509}
   - component: {fileID: 992821510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Confiner
   m_TagString: CameraConfiner
   m_Icon: {fileID: 0}
@@ -22449,7 +22449,6 @@ MonoBehaviour:
   teleportPoint: {fileID: 1671109873}
   moveVelocity: 7
   jumpVelocity: 14
-  jumpSound: {fileID: 1000960342}
 --- !u!95 &1000960338
 Animator:
   serializedVersion: 5
@@ -22494,7 +22493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f84607add7b5d9499c1cf0268dc489b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSound: {fileID: 1000960344}
   invincible: 0
 --- !u!82 &1000960342
 AudioSource:
@@ -22821,7 +22819,6 @@ MonoBehaviour:
   bullet1Prefab: {fileID: 3453762755922855194, guid: ff35a1511326fdf4bad53ac2c5a0c999, type: 3}
   bullet2Prefab: {fileID: 3453762755922855194, guid: 700bb5816bf93d24fa5320d90657f660, type: 3}
   bullet3Prefab: {fileID: 3453762755922855194, guid: 20c0c42d8e290e74ebd251561d110f37, type: 3}
-  collectSound: {fileID: 1000960343}
 --- !u!114 &1000960350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23289,7 +23286,7 @@ GameObject:
   - component: {fileID: 1037951292}
   - component: {fileID: 1037951291}
   m_Layer: 0
-  m_Name: Layer-1
+  m_Name: Layer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24991,7 +24988,7 @@ GameObject:
   - component: {fileID: 1210966067}
   - component: {fileID: 1210966066}
   m_Layer: 0
-  m_Name: Layer-0
+  m_Name: Layer_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25208,7 +25205,7 @@ GameObject:
   - component: {fileID: 1230425709}
   - component: {fileID: 1230425708}
   m_Layer: 0
-  m_Name: Layer-2
+  m_Name: Layer_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27017,7 +27014,7 @@ GameObject:
   - component: {fileID: 1524615385}
   - component: {fileID: 1524615384}
   m_Layer: 0
-  m_Name: Layer-3
+  m_Name: Layer_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27118,7 +27115,7 @@ GameObject:
   - component: {fileID: 1530714483}
   - component: {fileID: 1530714482}
   m_Layer: 0
-  m_Name: Layer-5
+  m_Name: Layer_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28644,7 +28641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671109873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 207.64, y: 6.5, z: -2.0008721}
+  m_LocalPosition: {x: 88.01, y: -0.62, z: -2.0008721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29204,7 +29201,7 @@ GameObject:
   - component: {fileID: 1721634631}
   - component: {fileID: 1721634632}
   m_Layer: 0
-  m_Name: Layer-4
+  m_Name: Layer_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31558,7 +31555,7 @@ MonoBehaviour:
   player: {fileID: 1000960332}
   bossHead: {fileID: 1881784541}
   jumpForce: 15
-  jumpFrequency: 0.9
+  jumpFrequency: 0.85
   horizontalSpeed: 15
   catchUpDistance: 0.5
   rotationSpeed: 2

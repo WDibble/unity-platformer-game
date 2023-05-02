@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4900513194781011576}
   - component: {fileID: 4900513194781011583}
   - component: {fileID: -299815234472030281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invisible Blade
   m_TagString: Trap
   m_Icon: {fileID: 0}

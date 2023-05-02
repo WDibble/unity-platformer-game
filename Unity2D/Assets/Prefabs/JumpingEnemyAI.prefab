@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6405412918118105943}
   - component: {fileID: 6405412918118105939}
   - component: {fileID: 6405412918118105944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JumpingEnemyAI
   m_TagString: Trap
   m_Icon: {fileID: 0}

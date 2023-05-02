@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 293927925048733136}
   - component: {fileID: 293927925048733137}
   - component: {fileID: 293927925048733138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TNT
   m_TagString: Trap
   m_Icon: {fileID: 0}

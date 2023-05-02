@@ -1,3 +1,12 @@
+/*
+ * WeaponSelection.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script handles weapon selection, bullet counts, and weapon-related actions for the player character.
+ * It includes methods for spawning bullets, updating UI elements, and collecting bullets.
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -29,11 +38,11 @@ public class WeaponSelection : MonoBehaviour
     [SerializeField] private GameObject bullet2Prefab;
     [SerializeField] private GameObject bullet3Prefab;
 
-    // Sound effect played when a bullet is collected
-    [SerializeField] private AudioSource collectSound;
-
     // Reference to the Timer script
     private Timer timer;
+
+    // Reference to the Audio Manager script
+    private AudioManager audioManager;
 
     private void Start()
     {
@@ -45,6 +54,9 @@ public class WeaponSelection : MonoBehaviour
 
         // Find the Timer object and get its Timer script component
         timer = FindObjectOfType<Timer>();
+
+        // Find the Audio object and get its Audio Manager script component
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
@@ -63,7 +75,7 @@ public class WeaponSelection : MonoBehaviour
             bulletBoxImage.sprite = weaponSprites[currentWeaponIndex];
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             // Check if the current weapon index is 0 (corresponding to the specific bullet)
             if (currentWeaponIndex == 0)
@@ -74,6 +86,7 @@ public class WeaponSelection : MonoBehaviour
                     // Decrease the value of the bullet1Count variable and spawn a bullet1Prefab at the fire point
                     timer.SetBullet1Count(bullet1Count - 1);
                     Instantiate(bullet1Prefab, firePoint.position, firePoint.rotation);
+                    audioManager.PlayFire1();
                 }
             }
             // Check if the current weapon index is 1 (corresponding to the second bullet)
@@ -85,6 +98,7 @@ public class WeaponSelection : MonoBehaviour
                     // Decrease the value of the bullet2Count variable and spawn a bullet2Prefab at the fire point
                     timer.SetBullet2Count(bullet2Count - 1);
                     Instantiate(bullet2Prefab, firePoint.position, firePoint.rotation);
+                    audioManager.PlayFire1();
                 }
             }
             // Check if the current weapon index is 2 (corresponding to the third bullet)
@@ -96,6 +110,7 @@ public class WeaponSelection : MonoBehaviour
                     // Decrease the value of the bullet3Count variable and spawn a bullet3Prefab at the fire point
                     timer.SetBullet3Count(bullet3Count - 1);
                     Instantiate(bullet3Prefab, firePoint.position, firePoint.rotation);
+                    audioManager.PlayFire1();
                 }
             }
         }
@@ -113,7 +128,7 @@ public class WeaponSelection : MonoBehaviour
                 // Destroy the collided object, increase the bullet1Count and play the collect sound effect
                 Destroy(collision.gameObject);
                 timer.SetBullet1Count(bullet1Count + 1);
-                collectSound.Play();
+                audioManager.PlayCollectSound();
             }
         }
         // Check if the collided object has the "Bullet2Collect" tag
@@ -126,7 +141,7 @@ public class WeaponSelection : MonoBehaviour
                 // Destroy the collided object, increase the bullet2Count and play the collect sound effect
                 Destroy(collision.gameObject);
                 timer.SetBullet2Count(bullet2Count + 1);
-                collectSound.Play();
+                audioManager.PlayCollectSound();
             }
         }
         // Check if the collided object has the "Bullet3Collect" tag
@@ -139,7 +154,7 @@ public class WeaponSelection : MonoBehaviour
                 // Destroy the collided object, increase the bullet3Count and play the collect sound effect
                 Destroy(collision.gameObject);
                 timer.SetBullet3Count(bullet3Count + 1);
-                collectSound.Play();
+                audioManager.PlayCollectSound();
             }
         }
     }

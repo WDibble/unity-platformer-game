@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4900513194781011583}
   - component: {fileID: -299815234472030281}
   - component: {fileID: 2480756803948538830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invisible Bat
   m_TagString: Trap
   m_Icon: {fileID: 0}

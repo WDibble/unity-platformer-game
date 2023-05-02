@@ -1,3 +1,13 @@
+/*
+ * Rotate.cs
+ * Author: William Dibble
+ * Date: 24-04-2023
+ *
+ * This script rotates an object continuously at a given speed as long as the 
+ * distance between the object and a player is within a specified maximum distance.
+ * 
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
