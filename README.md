@@ -57,6 +57,64 @@ Shoot: C
 Switch Weapon: V
 ```
 
+## 🗺️ Level Breakdown
+
+### Level 1: 🌿 Grassy Gauntlet
+
+Welcome to your first challenge! This verdant training ground will test your mettle through:
+- 🏃‍♂️ Fluid movement mechanics
+- 🎯 Precise shooting challenges
+- 🌫️ Introduction to invisibility powers
+- 🤖 Basic enemy encounters
+
+#### Key Challenges:
+- 🔰 Master basic movement and shooting
+- ⚔️ Navigate deadly spike fields and sawblade gauntlets
+- 🦾 Face your first jumping and rolling enemies
+- 🎯 Learn the art of bullet-type switching
+
+### Level 2: 🏃‍♂️ The Chase Begins
+
+The hunt is on! As you emerge from the safety of the tutorial:
+- 😱 An unstoppable force pursues you
+- 💨 Test your speed and reflexes
+- 🌫️ Use invisibility to throw off your pursuer
+- 💥 Navigate crumbling platforms while under pressure
+
+#### Key Challenges:
+- 👻 Evade the relentless pursuer
+- 🏃‍♂️ Master high-speed platforming
+- 🎭 Strategic invisibility timing
+- ⚡ Quick thinking under pressure
+
+### Level 3: 🔮 Invisible Ascent
+
+Your vertical adventure begins! This mystical cavern holds:
+- 👻 Platforms that phase in and out of reality
+- 🦇 Stealth-based enemy encounters
+- ⭐ Double-jump power unleashed
+- 🌌 Reality-bending level design
+
+#### Key Challenges:
+- 🦋 Perfect your double-jump timing
+- 👁️ Master visibility-dependent platforming
+- 🎭 Coordinate invisibility with platform phases
+- ⬆️ Conquer the vertical challenge
+
+### Level 4: ⚔️ The Final Showdown
+
+Face your destiny in an epic conclusion featuring:
+- 🦇 The mighty Bat Boss with advanced AI
+- 🌟 All skills put to the ultimate test
+- 🎭 Complex invisibility mind games
+- 🏆 Your final challenge awaits!
+
+#### Key Challenges:
+- 🔥 Epic boss battle with dynamic AI
+- 🎮 Utilize every skill in your arsenal
+- 🧠 Outsmart the boss's mimicry abilities
+- 🌟 Prove your mastery of the shadows
+
 ## 🛠️ Technical Implementation
 ### Core Systems
 - [Weapon.cs](Assets\Scripts\Weapon.cs): Handles weapon switching and bullet firing
