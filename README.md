@@ -1,7 +1,7 @@
 # 🎮 Into The Shadows - A Strategic 2D Platformer
 
 <div align="center">
-![Game Preview](/src/assets/preview.png)
+[![Title Screen](/preview/TitleScreen.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 A thrilling 2D platformer where mastering invisibility and strategic bullet choices are your keys to survival.
 
@@ -55,9 +55,12 @@ Movement: Arrow Keys / WASD
 Jump: Spacebar
 Shoot: C
 Switch Weapon: V
+Activate Invisibility: F
 ```
 
 ## 🗺️ Level Breakdown
+
+[![Level 1](/preview/Level1-2.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 ### Level 1: 🌿 Grassy Gauntlet
 
@@ -67,6 +70,7 @@ Welcome to your first challenge! This verdant training ground will test your met
 - 🌫️ Introduction to invisibility powers
 - 🤖 Basic enemy encounters
 
+[![Level 2](/preview/Level2.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 ### Level 2: 🏃‍♂️ The Chase Begins
 
@@ -76,6 +80,8 @@ The hunt is on! As you emerge from the safety of the tutorial:
 - 🌫️ Use invisibility to throw off your pursuer
 - 💥 Navigate crumbling platforms while under pressure
 
+[![Level 3](/preview/Level3.gif)](https://thedibbs.itch.io/into-the-shadows)
+
 ### Level 3: 🔮 Invisible Ascent
 
 Your vertical adventure begins! This mystical cavern holds:
@@ -83,6 +89,8 @@ Your vertical adventure begins! This mystical cavern holds:
 - 🦇 Stealth-based enemy encounters
 - ⭐ Double-jump power unleashed
 - 🌌 Reality-bending level design
+
+[![Level 4](/preview/Level4.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 ### Level 4: ⚔️ The Final Showdown
 
