@@ -1,7 +1,7 @@
 # 🎮 Into The Shadows - A Strategic 2D Platformer
 
 <div align="center">
-[![Title Screen](/preview/TitleScreen.gif)](https://thedibbs.itch.io/into-the-shadows)
+![Preview](/preview/Level1.gif)
 
 A thrilling 2D platformer where mastering invisibility and strategic bullet choices are your keys to survival.
 
@@ -60,9 +60,9 @@ Activate Invisibility: F
 
 ## 🗺️ Level Breakdown
 
-[![Level 1](/preview/Level1-2.gif)](https://thedibbs.itch.io/into-the-shadows)
-
 ### Level 1: 🌿 Grassy Gauntlet
+
+[![Level 1](/preview/Level1-2.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 Welcome to your first challenge! This verdant training ground will test your mettle through:
 - 🏃‍♂️ Fluid movement mechanics
@@ -70,9 +70,9 @@ Welcome to your first challenge! This verdant training ground will test your met
 - 🌫️ Introduction to invisibility powers
 - 🤖 Basic enemy encounters
 
-[![Level 2](/preview/Level2.gif)](https://thedibbs.itch.io/into-the-shadows)
-
 ### Level 2: 🏃‍♂️ The Chase Begins
+
+[![Level 2](/preview/Level2.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 The hunt is on! As you emerge from the safety of the tutorial:
 - 😱 An unstoppable force pursues you
@@ -80,9 +80,9 @@ The hunt is on! As you emerge from the safety of the tutorial:
 - 🌫️ Use invisibility to throw off your pursuer
 - 💥 Navigate crumbling platforms while under pressure
 
-[![Level 3](/preview/Level3.gif)](https://thedibbs.itch.io/into-the-shadows)
-
 ### Level 3: 🔮 Invisible Ascent
+
+[![Level 3](/preview/Level3.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 Your vertical adventure begins! This mystical cavern holds:
 - 👻 Platforms that phase in and out of reality
@@ -90,9 +90,9 @@ Your vertical adventure begins! This mystical cavern holds:
 - ⭐ Double-jump power unleashed
 - 🌌 Reality-bending level design
 
-[![Level 4](/preview/Level4.gif)](https://thedibbs.itch.io/into-the-shadows)
-
 ### Level 4: ⚔️ The Final Showdown
+
+[![Level 4](/preview/Level4.gif)](https://thedibbs.itch.io/into-the-shadows)
 
 Face your destiny in an epic conclusion featuring:
 - 🦇 The mighty Bat Boss with advanced AI
