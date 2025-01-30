@@ -1,7 +1,7 @@
 # 🎮 Into The Shadows - A Strategic 2D Platformer
 
 <div align="center">
-![Preview](/preview/Level1.gif)
+<img src="/preview/Level1.gif" alt="Preview" />
 
 A thrilling 2D platformer where mastering invisibility and strategic bullet choices are your keys to survival.
 
